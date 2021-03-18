@@ -13,14 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/posts/{post}', function ($post) {
 
-Route::get('/test', function (){
-    $name = request('name');
-    return view('test', [
-        'name' => $name
+    $posts = [
+        'my-first-post' => 'Hello, this is my first blog post!',
+        'my-second-post' => 'Hello, I am getting a hang of this blogging thing!'
+    ];
+
+    if ( !array_key_exists($post, $posts) ) {
+        abort(404, 'Sorry, that post was not found!');
+    }
+
+    return view('posts', [
+        'post' => $posts[$post] // ?? 'Nothing here yet'
     ]);
 });
 

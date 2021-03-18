@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>This is the test page!</h1>
-    <p>Welcome {{ $name }}</p>
+    <h1>My Blog Posts</h1>
+    <p>{{ $post }}</p>
 </body>
 </html>
