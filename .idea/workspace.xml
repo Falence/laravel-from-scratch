@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87191bb7-81d9-411c-ad67-c49df1a898c5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/laravel-from-scratch.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/test.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -158,7 +164,7 @@
       <option name="presentableId" value="Default" />
       <updated>1616075925020</updated>
       <workItem from="1616075926311" duration="953000" />
-      <workItem from="1616082623313" duration="325000" />
+      <workItem from="1616082623313" duration="681000" />
     </task>
     <servers />
   </component>
