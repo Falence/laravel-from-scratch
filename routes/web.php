@@ -15,3 +15,7 @@ use App\Http\Controllers\PostController;
 Route::view('/', 'welcome');
 Route::get('/posts/{slug}', [PostController::class, 'show']);
 
+Route::get('/about', function () {
+   return view('about');
+});
+
