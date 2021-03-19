@@ -12,6 +12,6 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::view('/', 'welcome');
 Route::get('/posts/{slug}', [PostController::class, 'show']);
 
