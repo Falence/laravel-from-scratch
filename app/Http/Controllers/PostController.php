@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 class PostController extends Controller
 {
     public function show($slug)
     {
-        $post = \DB::table('posts')->where('slug', $slug)->first();
-
-        return view('posts', ['post' => $post]);
+        return view('posts', [
+            'post' => Post::where('slug', $slug)->firstOrFail()
+        ]);
     }
 }
