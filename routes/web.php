@@ -23,5 +23,6 @@ Route::get('/about', function () {
    ]);
 });
 
+Route::get('/articles', [ArticleController::class, 'all']);
 Route::get('/articles/{article}', [ArticleController::class, 'show']);
 
