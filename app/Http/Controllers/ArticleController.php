@@ -36,6 +36,7 @@ class ArticleController extends Controller
 
     public function store()
     {
+        /*
         $this->validateInput();
 
         $article = new Article();
@@ -45,6 +46,9 @@ class ArticleController extends Controller
         $article->body = request('body');
 
         $article->save();
+        */
+
+        Article::create($this->validateInput());
 
         return redirect('/articles');
     }
@@ -58,7 +62,7 @@ class ArticleController extends Controller
     public function update(Article $article)
     {
         //$article = Article::find($id);
-
+        /*
         $this->validateInput();
 
         $article->title = request('title');
@@ -66,6 +70,9 @@ class ArticleController extends Controller
         $article->body = request('body');
 
         $article->save();
+        */
+
+        $article->update($this->validateInput());
 
         return redirect('/articles');
     }
