@@ -19,4 +19,9 @@ class ArticleController extends Controller
             'articles' => Article::latest()->get()
         ]);
     }
+
+    public function create()
+    {
+        return view('articles.create');
+    }
 }
