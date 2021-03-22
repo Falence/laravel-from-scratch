@@ -13,10 +13,10 @@ class ArticleController extends Controller
         return view('articles.show', ['article' => $article] );
     }
 
-    public function all()
+    public function index()
     {
-        return view('articles.all', [
-            'articles' => Article::all()
+        return view('articles.index', [
+            'articles' => Article::latest()->get()
         ]);
     }
 }
