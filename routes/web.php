@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ArticleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +17,11 @@ Route::view('/', 'welcome');
 Route::get('/posts/{slug}', [PostController::class, 'show']);
 
 Route::get('/about', function () {
-   return view('about');
+
+   return view('about', [
+       'articles' => App\Models\Article::latest()->get()
+   ]);
 });
+
+Route::get('/articles/{article}', [ArticleController::class, 'show']);
 
