@@ -6,23 +6,23 @@
 
     <div id="wrapper">
         <div id="page" class="container">
-            <form>
-                <h1>Create a new article</h1>
-
+            <h1>Create a new article</h1>
+            <form method="POST" action="/articles">
+                @csrf
                 <div class="mb-3">
                     <label for="title" class="form-label">Title:</label>
-                    <input placeholder="Title of your article" type="text" class="form-control" id="title" aria-describedby="titleHelp">
+                    <input name="title" placeholder="Title of your article" type="text" class="form-control" id="title" aria-describedby="titleHelp">
                     <div id="titleHelp" class="form-text">A title that best describes your article.</div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Excerpts:</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="Excerpts of your article..."></textarea>
+                    <label for="excerpt" class="form-label">Excerpts:</label>
+                    <textarea name="excerpt" class="form-control" id="excerpt" rows="1" placeholder="Excerpts of your article..."></textarea>
                 </div>
 
                 <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Body:</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Body of your article..."></textarea>
+                    <label for="body" class="form-label">Body:</label>
+                    <textarea name="body" class="form-control" id="body" rows="3" placeholder="Body of your article..."></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary mt-4">Submit</button>
