@@ -7,7 +7,7 @@
     <div id="wrapper">
         <div id="page" class="container">
             <h1>Create a new article</h1>
-            <form method="POST" action="/articles">
+            <form method="POST" action="{{ route('articles.store') }}">
                 @csrf
                 <div class="mb-3">
                     <label for="title" class="form-label">Title:</label>

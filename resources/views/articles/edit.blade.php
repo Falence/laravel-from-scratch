@@ -7,7 +7,7 @@
     <div id="wrapper">
         <div id="page" class="container">
             <h1>Edit article</h1>
-            <form method="POST" action="/articles/{{ $article->id }}">
+            <form method="POST" action="{{ route('articles.update', $article) }}">
                 @csrf
                 @method('PUT')
                 <div class="mb-3">
