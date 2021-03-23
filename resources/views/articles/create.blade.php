@@ -31,7 +31,9 @@
                               class="form-control @error('excerpt') border border-danger @enderror"
                               id="excerpt"
                               rows="1"
-                              placeholder="Excerpts of your article...">{{ old('excerpt') }}</textarea>
+                              placeholder="Excerpts of your article...">
+                        {{ old('excerpt') }}
+                    </textarea>
                     @error('excerpt')
                         <p class="text text-danger">{{ $message }}</p>
                     @enderror
@@ -43,7 +45,9 @@
                               class="form-control @error('body') border border-danger @enderror"
                               id="body"
                               rows="3"
-                              placeholder="Body of your article...">{{ old('body') }}</textarea>
+                              placeholder="Body of your article...">
+                        {{ old('body') }}
+                    </textarea>
                     @error('excerpt')
                     <p class="text text-danger">{{ $message }}</p>
                     @enderror
