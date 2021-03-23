@@ -50,7 +50,7 @@ class ArticleController extends Controller
 
         Article::create($this->validateInput());
 
-        return redirect('/articles');
+        return redirect()->route('articles.index');
     }
 
     public function edit(Article $article)
@@ -74,6 +74,6 @@ class ArticleController extends Controller
 
         $article->update($this->validateInput());
 
-        return redirect('/articles');
+        return redirect( $article->path() );
     }
 }
