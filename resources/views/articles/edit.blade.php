@@ -12,18 +12,33 @@
                 @method('PUT')
                 <div class="mb-3">
                     <label for="title" class="form-label">Title:</label>
-                    <input name="title" value="{{ $article->title }}" placeholder="Title of your article" type="text" class="form-control" id="title" aria-describedby="titleHelp">
+                    <input name="title"
+                           value="{{ $article->title }}"
+                           placeholder="Title of your article"
+                           type="text"
+                           class="form-control"
+                           id="title"
+                           aria-describedby="titleHelp">
                     <div id="titleHelp" class="form-text">A title that best describes your article.</div>
                 </div>
 
                 <div class="mb-3">
                     <label for="excerpt" class="form-label">Excerpts:</label>
-                    <textarea name="excerpt" class="form-control" id="excerpt" rows="1" placeholder="Excerpts of your article...">{{ $article->excerpt }}</textarea>
+                    <textarea
+                        name="excerpt"
+                        class="form-control"
+                        id="excerpt"
+                        rows="1"
+                        placeholder="Excerpts of your article...">{{ $article->excerpt }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="body" class="form-label">Body:</label>
-                    <textarea name="body" class="form-control" id="body" rows="10" placeholder="Body of your article...">{{ $article->body }}</textarea>
+                    <textarea name="body"
+                              class="form-control"
+                              id="body"
+                              rows="10"
+                              placeholder="Body of your article...">{{ $article->body }}</textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary mt-4">Submit</button>

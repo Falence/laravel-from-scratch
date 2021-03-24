@@ -6,7 +6,7 @@
         <div id="page" class="container">
             <div id="content">
                 <ul class="style1">
-                    @foreach($articles as $article)
+                    @forelse($articles as $article)
                         <li class="first">
                             <h3><a href="{{ $article->path() }}">{{ $article->title }}</a></h3>
                             <p>
@@ -14,7 +14,9 @@
                             </p>
                             <p>{{ $article->excerpt }}</p>
                         </li>
-                    @endforeach
+                    @empty
+                        <div>No "{{ request('tag') }}" related articles have been posted yet!</div>
+                    @endforelse
                 </ul>
             </div>
         </div>
