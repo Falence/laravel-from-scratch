@@ -37,7 +37,8 @@ class ArticleController extends Controller
 
     public function create()
     {
-        return view('articles.create');
+        $tags = Tag::all();
+        return view('articles.create', compact('tags'));
     }
 
     public function store()
@@ -53,7 +54,7 @@ class ArticleController extends Controller
 
         $article->save();
         */
-
+        dd(request()->all());
         Article::create($this->validateInput());
 
         return redirect()->route('articles.index');
