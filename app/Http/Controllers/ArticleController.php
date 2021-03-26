@@ -13,7 +13,8 @@ class ArticleController extends Controller
         return request()->validate([
             'title' => 'required',
             'excerpt' => 'required',
-            'body' => 'required'
+            'body' => 'required',
+            'tags' => 'exists:tags,id'
     ]);
     }
 
@@ -54,8 +55,12 @@ class ArticleController extends Controller
 
         $article->save();
         */
-        dd(request()->all());
-        Article::create($this->validateInput());
+        $this->validateInput();
+        $article = new Article(request(['title', 'excerpt', 'body']));
+        $article->user_id = 1;
+        $article->save();
+
+        $article->tags()->attach(request('tags'));
 
         return redirect()->route('articles.index');
     }

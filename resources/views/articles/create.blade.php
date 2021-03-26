@@ -55,20 +55,18 @@
 
                 <div class="mb-3">
                     <label for="tags" class="form-label">Tag(s):</label>
-                        <div>
+                    <div>
                         <select
                             name="tags[]"
                             multiple
-                            class = "custom-select"
                         >
-                            <option selected disabled>-Select your tag(s)-</option>
                             @foreach($tags as $tag)
                                 <option value="{{ $tag->id }}">{{ $tag->name }}</option>
                             @endforeach
                         </select>
                     </div>
                     @error('tags')
-                    <p class="text text-danger">{{ $message }}</p>
+                        <p class="text text-danger">{{ $message }}</p>
                     @enderror
                 </div>
 
